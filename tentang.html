@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang - Flower Coffee</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <script src="static/js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>Flower Coffee</h1>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="menu.html">Menu</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <!-- ISI HALAMAN TENTANG -->
+    <section class="tentang">
+      <h2>Tentang Flower Coffee</h2>
+      <p>
+        Flower Coffee berdiri sejak 2021 dengan misi menyajikan kehangatan lewat
+        secangkir kopi lokal berkualitas.
+      </p>
+      <p>
+        Kami percaya bahwa kopi bukan sekadar minuman, tapi sarana untuk
+        mempertemukan cerita dan kebersamaan.
+      </p>
+
+      <button onclick="bukaPopup()" class="btn">Lihat Visi Kami</button>
+    </section>
+
+    <!-- POPUP VISI -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span onclick="tutupPopup()" class="close">&times;</span>
+        <h3>Visi Kami</h3>
+        <p>
+          Menjadi tempat kopi lokal yang ramah, hangat, dan menghubungkan
+          manusia lewat cita rasa yang jujur.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2025 Flower Coffee. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

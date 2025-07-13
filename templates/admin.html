@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin - Pesan Masuk</title>
+    <style>
+      body {
+        font-family: Arial;
+        max-width: 800px;
+        margin: 40px auto;
+        background: #fdfdfd;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pesan Masuk</h2>
+
+    <p><a href="/logout">Logout</a></p>
+
+    {% if pesan %}
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nama</th>
+          <th>Pesan</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for p in pesan %}
+        <tr>
+          <td>{{ p[0] }}</td>
+          <td>{{ p[1] }}</td>
+          <td>{{ p[2] }}</td>
+          <td>
+            <a
+              href="/hapus/{{ p[0] }}"
+              onclick="return confirm('Yakin ingin menghapus pesan ini?');"
+              >Hapus</a
+            >
+            <a href="/export">Download CSV</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p>Tidak ada pesan.</p>
+    {% endif %}
+  </body>
+</html>

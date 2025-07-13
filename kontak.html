@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - Flower Coffee</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <script src="static/js/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Flower Coffee</h1>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="menu.html">Menu</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </header>
+
+    <section class="kontak">
+      <h2>Hubungi Kami</h2>
+
+      <form id="formKontak" class="form-kontak">
+        <label for="nama">Nama:</label><br />
+        <input type="text" id="nama" name="nama" required /><br /><br />
+
+        <label for="pesan">Pesan:</label><br />
+        <textarea id="pesan" name="pesan" required></textarea><br /><br />
+
+        <button type="submit" class="btn">Kirim</button>
+      </form>
+
+      <p id="sukses" class="sukses" style="display: none">
+        Pesan berhasil dikirim! Terima kasih 😊
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Flower Coffee. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block title %}Kontak - Flower Coffee{% endblock %}
+{% block content %}
+
+<section class="kontak">
+  <h2>Hubungi Kami</h2>
+
+  {% if error %}
+  <p style="color: red">{{ error }}</p>
+  {% endif %}
+
+  <!-- Form Kontak -->
+  <form method="POST" action="/kontak" class="form-kontak">
+    <label for="nama">Nama:</label><br />
+    <input type="text" id="nama" name="nama" required /><br /><br />
+
+    <label for="pesan">Pesan:</label><br />
+    <textarea id="pesan" name="pesan" required></textarea><br /><br />
+
+    <button type="submit" class="btn">Kirim</button>
+  </form>
+
+  <!-- Notifikasi jika sukses -->
+  {% if sukses %}
+  <p class="sukses">Pesan berhasil dikirim! Terima kasih, {{ nama }} 😊</p>
+  {% endif %}
+</section>
+
+{% endblock %}
